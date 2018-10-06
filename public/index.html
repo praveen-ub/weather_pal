@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WeatherPal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/weatherpal.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+          <a class="navbar-brand" rel="home" href="/" title="Find Realtime Weather">WeatherPal</a>
+      </div>
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="navbar-nav">
+          <li>
+            <form class="navbar-form" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" data-toggle="tooltip" data-placement="top" placeholder="Enter Source City" id="source-input">
+              </div>
+            </form>
+           </li>
+           <li>
+            <form class="navbar-form" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" data-toggle="tooltip" data-placement="top" placeholder="Enter Destination City" id="dest-input">
+              </div>
+            </form>
+           </li>
+           <li>
+            <form class="navbar-form" role="search">
+              <div class="input-group">
+                  <div class="input-group-btn">
+                      <button class="btn btn-default" id="search-routes" type="button"><i class="glyphicon glyphicon-search"></i></button>
+                  </div>
+              </div>
+            </form>
+           </li>
+           <li class="error" style="display: none;">
+             <div class="alert alert-danger" name="error-div" role="alert">
+             </div>
+           </li>
+        </ul>
+      </div>
+    </div>
+    <!-- <div style="float:left;">widget</div> -->
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQ4fdgmwd5tNsjI50ZqTIO0LURkXccxzc&callback=initMap&libraries=geometry"
+    async defer></script>
+  </body>
+</html>
